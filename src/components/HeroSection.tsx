@@ -18,13 +18,8 @@ const HeroSection = () => {
         <div className="hero-text">
           <div className="hero-title-container">
             <h1 className="hero-title">
-              Coffee As It Should Be.
+              Coffee As It Should Be
             </h1>
-          </div>
-          <div className="hero-subtitle-container">
-            <h2 className="hero-subtitle">
-              5 Ingredients. No BS.
-            </h2>
           </div>
           <div className="hero-buttons">
             <button onClick={handleShopClick} className="shop-button">
