@@ -1,0 +1,80 @@
+.shop-page {
+  /* Removed margin-top to eliminate white space */
+}
+
+.shop-hero {
+  background-color: #E3D6BF;
+  padding: 60px 0 40px 0;
+  text-align: center;
+}
+
+.shop-title {
+  font-size: 48px;
+  font-weight: 500;
+  color: #3E342F;
+  margin-bottom: 16px;
+  letter-spacing: -1px;
+}
+
+.shop-subtitle {
+  font-size: 24px;
+  font-weight: 500;
+  color: #3E342F;
+  margin: 0;
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+  .shop-page {
+    /* Removed margin-top */
+  }
+
+  .shop-hero {
+    padding: 50px 0 30px 0;
+  }
+
+  .shop-title {
+    font-size: 42px;
+  }
+
+  .shop-subtitle {
+    font-size: 20px;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .shop-page {
+    /* Removed margin-top */
+  }
+
+  .shop-hero {
+    padding: 40px 0 20px 0;
+  }
+
+  .shop-title {
+    font-size: 32px;
+  }
+
+  .shop-subtitle {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .shop-page {
+    /* Removed margin-top */
+  }
+
+  .shop-hero {
+    padding: 30px 0 15px 0;
+  }
+
+  .shop-title {
+    font-size: 26px;
+  }
+
+  .shop-subtitle {
+    font-size: 16px;
+  }
+} 

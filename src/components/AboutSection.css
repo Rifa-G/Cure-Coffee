@@ -1,0 +1,135 @@
+.about-section {
+  background-color: #E7DBC7;
+  padding: 80px 0;
+}
+
+.about-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.about-title {
+  background-color: #3E342F;
+  color: #FAF4ED;
+  font-size: 24px; /* Reduced from 32px */
+  font-weight: 500;
+  padding: 12px 32px; /* Slightly reduced padding */
+  border-radius: 0px;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-message {
+  margin-bottom: 60px;
+}
+
+.about-paragraph {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #3E342F;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.about-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.about-signature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.signature-image {
+  height: 60px;
+  width: auto;
+}
+
+.founder-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #3E342F;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+  .about-section {
+    padding: 60px 0;
+  }
+
+  .about-title {
+    font-size: 22px; /* Reduced from 28px */
+    padding: 12px 28px; /* Adjusted padding */
+  }
+
+  .about-paragraph {
+    font-size: 17px;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 50px 0;
+  }
+
+  .about-header {
+    margin-bottom: 40px;
+  }
+
+  .about-title {
+    font-size: 20px; /* Reduced from 24px */
+    padding: 10px 20px; /* Adjusted padding */
+  }
+
+  .about-message {
+    margin-bottom: 40px;
+  }
+
+  .about-paragraph {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  .signature-image {
+    height: 50px;
+  }
+
+  .founder-title {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 40px 0;
+  }
+
+  .about-title {
+    font-size: 18px; /* Reduced from 20px */
+    padding: 8px 16px; /* Adjusted padding */
+  }
+
+  .about-paragraph {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .signature-image {
+    height: 40px;
+  }
+
+  .founder-title {
+    font-size: 13px;
+  }
+} 
