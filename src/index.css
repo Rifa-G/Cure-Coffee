@@ -1,5 +1,4 @@
-/* Global CSS with Helvetica Neue Medium font */
-@import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;500;600;700&display=swap');
+/* Global CSS with system fonts */
 
 * {
   margin: 0;
@@ -9,7 +8,7 @@
 }
 
 html, body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;

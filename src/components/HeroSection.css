@@ -195,10 +195,10 @@
   .hero-title, .hero-subtitle {
     font-size: 36px;
     white-space: nowrap;
-    text-align: center;
+    text-align: center !important;
   }
   .hero-buttons {
-    justify-content: center;
+    justify-content: center !important;
     gap: 16px;
     margin-top: 25px;
   }
@@ -223,7 +223,7 @@
   .hero-title, .hero-subtitle {
     font-size: 28px;
     white-space: nowrap;
-    text-align: center;
+    text-align: center !important;
   }
   .hero-subtitle-container {
     margin-bottom: 20px;
@@ -232,7 +232,7 @@
     flex-wrap: wrap;
     gap: 14px;
     margin-top: 20px;
-    justify-content: center;
+    justify-content: center !important;
   }
   .shop-button, .reach-out-button {
     padding: 12px 20px;
@@ -251,7 +251,7 @@
   .hero-title, .hero-subtitle {
     font-size: 22px;
     white-space: nowrap;
-    text-align: center;
+    text-align: center !important;
   }
   .hero-buttons {
     flex-direction: column;
