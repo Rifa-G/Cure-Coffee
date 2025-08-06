@@ -12,8 +12,9 @@
 .about-title {
   background-color: #3E342F;
   color: #FAF4ED;
-  font-size: 24px; /* Reduced from 32px */
+  font-size: 26px; /* Reduced from 32px */
   font-weight: 500;
+  font-family: 'Shippori Mincho', serif;
   padding: 12px 32px; /* Slightly reduced padding */
   border-radius: 0px;
   letter-spacing: 0.5px;

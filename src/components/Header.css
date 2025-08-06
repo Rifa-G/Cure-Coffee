@@ -6,7 +6,7 @@
   left: 0;
   right: 0;
   z-index: 2000;
-  background-color: transparent;
+  background-color: #978B80;
   padding: 12px 0;
   width: 100%;
 }
@@ -127,7 +127,6 @@
 }
 
 .cart-button:hover {
-  transform: translateY(-2px);
 }
 
 .cart-icon {

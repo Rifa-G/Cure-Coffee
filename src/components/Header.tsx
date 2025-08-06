@@ -33,7 +33,7 @@ const Header = () => {
   }
 
   const handleContactClick = () => {
-    window.open('https://mail.google.com/mail/?view=cm&fs=1&to=Jameswoodmanv@gmail.com', '_blank')
+    navigate('/contact')
   }
 
   const handleCartClick = () => {

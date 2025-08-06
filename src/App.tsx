@@ -4,6 +4,7 @@ import HeroSection from './components/HeroSection'
 import AboutSection from './components/AboutSection'
 import Footer from './components/Footer'
 import ShopPage from './pages/ShopPage'
+import ContactPage from './pages/ContactPage'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             </>
           } />
           <Route path="/shop" element={<ShopPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
       </div>

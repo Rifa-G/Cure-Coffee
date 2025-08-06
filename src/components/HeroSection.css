@@ -153,12 +153,10 @@
 
 .shop-button:hover {
   color: #3F352F;
-  transform: translateY(-2px);
 }
 
 .reach-out-button:hover {
   color: #FAF4ED;
-  transform: translateY(-2px);
 }
 
 /* === RESPONSIVE STYLES === */

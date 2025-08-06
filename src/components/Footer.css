@@ -13,28 +13,12 @@
 .footer-logo {
   height: 80px;
   width: 80px;
-  transition: all 0.3s ease;
   filter: brightness(0) saturate(100%) invert(93%) sepia(7%) saturate(277%) hue-rotate(327deg) brightness(102%) contrast(94%);
-}
-
-/* Inverse Colors on Hover */
-.footer-logo:hover {
-  transform: scale(1.1) rotate(-5deg);
-  filter: brightness(0) saturate(100%) invert(25%) sepia(12%) saturate(729%) hue-rotate(327deg) brightness(96%) contrast(95%);
-  background-color: #FAF4ED;
-  border-radius: 50%;
-  padding: 10px;
-  box-shadow: 0 8px 20px rgba(250, 244, 237, 0.3);
 }
 
 /* Ensure no rounded corners anywhere */
 .footer * {
   border-radius: 0px !important;
-}
-
-/* Override border-radius for hover effect specifically */
-.footer-logo:hover {
-  border-radius: 50% !important;
 }
 
 /* Tablet styles */
