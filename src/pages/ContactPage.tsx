@@ -1,30 +1,22 @@
-import { useState } from 'react'
+import { useForm, ValidationError } from '@formspree/react'
 import './ContactPage.css'
 
 const ContactPage = () => {
-  const [subject, setSubject] = useState('')
-  const [message, setMessage] = useState('')
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [state, handleSubmit] = useForm("xjkopvor")
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
-    // Create mailto URL with subject and body
-    const mailtoUrl = `mailto:Jameswoodmanv@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`
-    
-    // Open email client
-    window.open(mailtoUrl, '_blank')
-    
-    // Show success message
-    setIsSubmitted(true)
-    setSubject('')
-    setMessage('')
-    setIsSubmitting(false)
-    
-    // Reset success message after 3 seconds
-    setTimeout(() => setIsSubmitted(false), 3000)
+  if (state.succeeded) {
+    return (
+      <div className="contact-page">
+        <div className="contact-content">
+          <div className="contact-container">
+            <div className="success-message">
+              <h3>Thank you for your message!</h3>
+              <p>We'll get back to you as soon as possible</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
   }
 
   return (
@@ -34,46 +26,67 @@ const ContactPage = () => {
           <h1 className="contact-title">Get In Touch</h1>
           <p className="contact-subtitle">We'd love to hear from you</p>
           
-          {isSubmitted ? (
-            <div className="success-message">
-              <h3>Thank you for your message!</h3>
-              <p>Your email client should have opened with the message</p>
+          <form onSubmit={handleSubmit} className="contact-form">
+            <div className="form-group">
+              <label htmlFor="email" className="form-label">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                className="form-input"
+                required
+                placeholder="Enter your email"
+              />
+              <ValidationError 
+                prefix="Email" 
+                field="email"
+                errors={state.errors}
+                className="error-message"
+              />
             </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="contact-form">
-              <div className="form-group">
-                <label htmlFor="subject" className="form-label">Subject</label>
-                <input
-                  type="text"
-                  id="subject"
-                  value={subject}
-                  onChange={(e) => setSubject(e.target.value)}
-                  className="form-input"
-                  required
-                  placeholder="Enter subject"
-                />
-              </div>
 
-              <div className="form-group">
-                <label htmlFor="message" className="form-label">
-                  Please describe your query
-                </label>
-                <textarea
-                  id="message"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  className="form-textarea"
-                  required
-                  placeholder="Description"
-                  rows={6}
-                />
-              </div>
+            <div className="form-group">
+              <label htmlFor="subject" className="form-label">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                className="form-input"
+                required
+                placeholder="Enter subject"
+              />
+              <ValidationError 
+                prefix="Subject" 
+                field="subject"
+                errors={state.errors}
+                className="error-message"
+              />
+            </div>
 
-              <button type="submit" className="submit-button" disabled={isSubmitting}>
-                {isSubmitting ? 'OPENING EMAIL...' : 'SUBMIT'}
-              </button>
-            </form>
-          )}
+            <div className="form-group">
+              <label htmlFor="message" className="form-label">
+                Please describe your query
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                className="form-textarea"
+                required
+                placeholder="Description"
+                rows={6}
+              />
+              <ValidationError 
+                prefix="Message" 
+                field="message"
+                errors={state.errors}
+                className="error-message"
+              />
+            </div>
+
+            <button type="submit" className="submit-button" disabled={state.submitting}>
+              {state.submitting ? 'SENDING...' : 'SUBMIT'}
+            </button>
+          </form>
         </div>
       </div>
     </div>
