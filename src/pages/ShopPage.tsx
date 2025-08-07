@@ -3,9 +3,7 @@ import './ShopPage.css'
 
 const ShopPage = () => {
   return (
-    <div className="shop-page">
-      <ShopifyProduct />
-    </div>
+    <ShopifyProduct />
   )
 }
 

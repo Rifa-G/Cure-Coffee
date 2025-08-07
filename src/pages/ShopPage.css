@@ -1,11 +1,16 @@
 .shop-page {
-  /* Removed margin-top to eliminate white space */
+  min-height: 100vh; /* Ensure full height to prevent footer jumping */
+  padding-top: 80px; /* Account for fixed header */
+  background-color: #E3D6BF;
 }
 
 .shop-hero {
   background-color: #E3D6BF;
-  padding: 60px 0 40px 0;
+  padding: 40px 0;
   text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out 0.2s forwards;
 }
 
 .shop-title {
@@ -23,14 +28,33 @@
   margin: 0;
 }
 
+/* Shopify content animation */
+.shopify-section {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-out 0.6s forwards;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Tablet styles */
 @media (max-width: 1024px) {
   .shop-page {
-    /* Removed margin-top */
+    padding-top: 70px;
   }
 
   .shop-hero {
-    padding: 50px 0 30px 0;
+    padding: 35px 0;
   }
 
   .shop-title {
@@ -45,11 +69,11 @@
 /* Mobile styles */
 @media (max-width: 768px) {
   .shop-page {
-    /* Removed margin-top */
+    padding-top: 60px;
   }
 
   .shop-hero {
-    padding: 40px 0 20px 0;
+    padding: 30px 0;
   }
 
   .shop-title {
@@ -63,11 +87,11 @@
 
 @media (max-width: 480px) {
   .shop-page {
-    /* Removed margin-top */
+    padding-top: 50px;
   }
 
   .shop-hero {
-    padding: 30px 0 15px 0;
+    padding: 25px 0;
   }
 
   .shop-title {
